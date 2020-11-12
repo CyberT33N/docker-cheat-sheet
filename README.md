@@ -1,8 +1,9 @@
 # Docker Cheat Sheet
 Docker Cheat Sheet for the most needed stuff..
 
+<br><br>_________________________________________________________
+_________________________________________________________<br><br>
 
-<br><br>
 
 # Pull
 - Download OS from Docker rep
@@ -10,15 +11,45 @@ Docker Cheat Sheet for the most needed stuff..
 docker pull ubuntu
 ```
 
-<br><br>
+<br><br>_________________________________________________________
+_________________________________________________________<br><br>
 
 # Run
-Create Docker Container with Ubuntu
+
+## Create Docker Container with Ubuntu
 ```bash
 docker run -d -t --name samplename ubuntu
 ```
 
-<br><br>
+<br><br>## Args
+```bash
+## Amount of CPU you want to use for this container. In this case two and a half CPU
+--cpus 2.5
+
+## Name of the Container
+--name samplename
+
+## Run container in background and print container ID
+--detach , -d
+
+## Memory limit. In this case 512 MB
+--memory , -m 512
+
+## Enable unlimited Memory Swap
+--memory-swap -1
+## Use 2GB Memory Swap
+--memory-swap 2048
+
+## Allocate a pseudo-TTY (teletype aka terminal)
+--tty , -t
+
+## Username or UID (format: <name|uid>[:<group|gid>])
+--user , -u
+```
+
+<br><br>_________________________________________________________
+_________________________________________________________<br><br>
+
 
 # Ps
 Show running Container
@@ -26,7 +57,8 @@ Show running Container
 docker ps
 ```
 
-<br><br>
+<br><br>_________________________________________________________
+_________________________________________________________<br><br>
 
 # Exec
 Enter bash of Container
@@ -34,8 +66,13 @@ Enter bash of Container
 docker exec -it samplename bash
 ```
 
-<br><br>
 
+
+<br><br>
+_________________________________________________________
+_________________________________________________________
+
+<br><br>
 # Exit
 Exit container
 ```bash
