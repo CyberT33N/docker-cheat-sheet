@@ -18,7 +18,7 @@ _________________________________________________________<br><br>
 
 ## Create Docker Container with Ubuntu
 ```bash
-docker run -d -t --name samplename ubuntu
+docker run -d -t --name Socket.io-Chat-APP ubuntu
 ```
 
 <br><br>## Args
@@ -61,12 +61,17 @@ docker ps
 _________________________________________________________<br><br>
 
 # Exec
-Enter bash of Container
+
+
+## Enter bash of Container
 ```bash
 docker exec -it samplename bash
 ```
 
-
+## fix command not found error at clean debian container
+```
+apt-get update && apt-get -y install sudo
+```
 
 <br><br>
 _________________________________________________________
