@@ -26,14 +26,14 @@ docker run -d -t --name samplename ubuntu
 ## Amount of CPU you want to use for this container. In this case two and a half CPU
 --cpus 2.5
 
-## Name of the Container
+## Name of the Container - Only [a-zA-Z0-9][a-zA-Z0-9_.-] are allowed.
 --name samplename
 
 ## Run container in background and print container ID
 --detach , -d
 
 ## Memory limit. In this case 512 MB
---memory , -m 512
+--memory , -m 512m
 
 ## Enable unlimited Memory Swap
 --memory-swap -1
