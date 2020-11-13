@@ -25,10 +25,13 @@ sudo apt install docker-ce
 _________________________________________________________<br><br>
 
 
-# Pull
+# Pull (https://docs.docker.com/engine/reference/commandline/pull/)
 - Download OS from Docker rep
 ```bash
 docker pull ubuntu
+docker pull debian:jessie
+docker pull ubuntu:14.04
+docker pull myregistry.local:5000/testing/test-image
 ```
 
 <br><br>_________________________________________________________
