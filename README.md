@@ -148,12 +148,12 @@ docker-compose -v
 - You must create a file called **docker-compose.yml** anywhere on your server.
 
 ```yml
-version: '3.7' /*https://docs.docker.com/compose/compose-file/*/
+version: '3.7'
 services:
-  web:
-    image: httpd
-  database:
-    image: mongo
+ web:
+  image: nginx
+ database:
+  image: redis
 ```
 
 <br><br> ## Check if **docker-compose.yml** is valid
