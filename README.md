@@ -365,3 +365,51 @@ docker stop container_name
 # Re-create Container with new args
 docker run -p 8080:8080 -td image_name
 ```
+
+
+
+
+
+<br>
+<br>
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br>
+<br>
+
+# Save (https://docs.docker.com/engine/reference/commandline/save/)
+
+## Save specific image
+```bash
+sudo docker export image_name/image_id > socket.io-chat-app.tar
+```
+
+## Save all images to one tar file:
+```bash
+docker save $(docker images -q) -o socket.io-chat-app-full.tar
+```
+
+
+<br>
+<br>
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br>
+<br>
+
+## FAQ
+
+## How to fix docker: Got permission denied issue
+
+```bash
+sudo chmod 666 /var/run/docker.sock
+```
+
