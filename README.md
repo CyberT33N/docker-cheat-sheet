@@ -49,7 +49,8 @@ _________________________________________________________<br><br>
 docker run -d -t --name Socket.io-Chat-APP ubuntu
 ```
 
-<br><br> ## Args
+<br><br>
+## Args
 ```bash
 ## Amount of CPU you want to use for this container. In this case two and a half CPU
 --cpus 2.5
@@ -125,7 +126,8 @@ _________________________________________________________<br><br>
 
 
 
-<br><br> ## Install
+<br><br>
+## Install
 ```bash
 ## Install docker-compose
 sudo apt install docker-compose
@@ -138,7 +140,8 @@ docker-compose -v
 
 
 
-<br><br> ## Compose File
+<br><br>
+## Compose File
 - You must create a file called **docker-compose.yml** anywhere on your server.
 
 ```yml
@@ -156,7 +159,8 @@ docker-compose config
 ```
 
 
-<br><br> ## Start
+<br><br>
+## Start
 ```bash
 sudo docker-compose up -d ## -d means detached (Run container in background and print container ID)
 ```
