@@ -39,6 +39,7 @@ _________________________________________________________<br><br>
 # Start / Stop
 ```bash
 docker start <container-name/ID>
+docker stop <container-name/ID>
 ```
 
 <br><br>_________________________________________________________
@@ -164,7 +165,7 @@ docker-compose config
 <br><br>
 ## Start
 ```bash
-sudo docker-compose up -d ## -d means detached (Run container in background and print container ID)
+sudo docker-compose up -d
 ```
 
 ## Shutdown
