@@ -156,7 +156,8 @@ services:
   image: redis
 ```
 
-<br><br> ## Check if **docker-compose.yml** is valid
+<br><br>
+## Check if **docker-compose.yml** is valid
 ```bash
 docker-compose config
 ```
