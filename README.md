@@ -172,7 +172,7 @@ docker ps
 
 ## Create a image of existing container
 ```bash
-docker commit container_id  svendowideit/testimage:version3
+docker commit container_id svendowideit/testimage:version3
 ```
 
 
