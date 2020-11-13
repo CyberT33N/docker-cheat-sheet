@@ -22,7 +22,7 @@ Docker Containers 101 (https://www.youtube.com/watch?v=eGz9DS-aIeY)
 <br>
 
 
-# Hub
+# Hub (pre-defined container)
 - https://hub.docker.com/search?q=&type=image
 
 
