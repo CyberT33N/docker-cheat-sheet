@@ -1,22 +1,43 @@
 # Docker Cheat Sheet
 Docker Cheat Sheet for the most needed stuff..
 
+
+<br>
+<br>
+
+# Guides
+Docker Containers 101 (https://www.youtube.com/watch?v=eGz9DS-aIeY)
+
+
+
+<br>
+<br>
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br>
+<br>
+
+
 # Hub
 - https://hub.docker.com/search?q=&type=image
 
 
 
 
-<br />
-<br />
+<br>
+<br>
 
 
  _____________________________________________________
  _____________________________________________________
 
 
-<br />
-<br />
+<br>
+<br>
 
 
 # Install
@@ -31,16 +52,16 @@ sudo apt update
 sudo apt install docker-ce
 ```
 
-<br />
-<br />
+<br>
+<br>
 
 
  _____________________________________________________
  _____________________________________________________
 
 
-<br />
-<br />
+<br>
+<br>
 
 # Pull (https://docs.docker.com/engine/reference/commandline/pull/)
 ```bash
@@ -51,32 +72,32 @@ docker pull myregistry.local:5000/testing/test-image
 ```
 
 
-<br />
-<br />
+<br>
+<br>
 
 
  _____________________________________________________
  _____________________________________________________
 
 
-<br />
-<br />
+<br>
+<br>
 # Start / Stop
 ```bash
 docker start <container-name/ID>
 docker stop <container-name/ID>
 ```
 
-<br />
-<br />
+<br>
+<br>
 
 
  _____________________________________________________
  _____________________________________________________
 
 
-<br />
-<br />
+<br>
+<br>
 
 # Run
 
@@ -116,16 +137,16 @@ docker run -d -t --name Socket.io-Chat-APP ubuntu
 ```
 
 
-<br />
-<br />
+<br>
+<br>
 
 
  _____________________________________________________
  _____________________________________________________
 
 
-<br />
-<br />
+<br>
+<br>
 
 
 # ps
@@ -135,16 +156,16 @@ docker ps
 ```
 
 
-<br />
-<br />
+<br>
+<br>
 
 
  _____________________________________________________
  _____________________________________________________
 
 
-<br />
-<br />
+<br>
+<br>
 
 
 # Exec
@@ -160,16 +181,16 @@ apt-get update && apt-get -y install sudo
 ```
 
 
-<br />
-<br />
+<br>
+<br>
 
 
  _____________________________________________________
  _____________________________________________________
 
 
-<br />
-<br />
+<br>
+<br>
 
 
 
@@ -180,16 +201,16 @@ exit
 ```
 
 
-<br />
-<br />
+<br>
+<br>
 
 
  _____________________________________________________
  _____________________________________________________
 
 
-<br />
-<br />
+<br>
+<br>
 
 # Compose (Manage multiple container settings)
 - What is Docker Compose | How to create docker compose file | How to use Compose (https://www.youtube.com/watch?v=HUpIoF_conA)
