@@ -405,7 +405,7 @@ docker save $(docker images -q) -o socket.io-chat-app-full.tar
 <br>
 <br>
 
-## FAQ
+# FAQ
 
 ## How to fix docker: Got permission denied issue
 
