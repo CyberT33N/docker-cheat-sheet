@@ -104,11 +104,12 @@ docker exec -it samplename bash
 apt-get update && apt-get -y install sudo
 ```
 
-<br><br>
-_________________________________________________________
-_________________________________________________________
+<br><br>_________________________________________________________
+_________________________________________________________<br><br>
 
-<br><br># Exit
+
+
+# Exit
 Exit container
 ```bash
 exit
@@ -124,7 +125,7 @@ _________________________________________________________<br><br>
 
 
 
-<br><br>## Install
+<br><br> ## Install
 ```bash
 ## Install docker-compose
 sudo apt install docker-compose
@@ -137,7 +138,7 @@ docker-compose -v
 
 
 
-<br><br>## Compose File
+<br><br> ## Compose File
 - You must create a file called **docker-compose.yml** anywhere on your server.
 
 ```yml
@@ -149,13 +150,13 @@ services:
     image: mongo
 ```
 
-<br><br>## Check if **docker-compose.yml** is valid
+<br><br> ## Check if **docker-compose.yml** is valid
 ```bash
 docker-compose config
 ```
 
 
-<br><br>## Start
+<br><br> ## Start
 ```bash
 sudo docker-compose up -d ## -d means detached (Run container in background and print container ID)
 ```
