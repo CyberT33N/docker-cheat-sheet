@@ -26,7 +26,6 @@ _________________________________________________________<br><br>
 
 
 # Pull (https://docs.docker.com/engine/reference/commandline/pull/)
-- Download OS from Docker rep
 ```bash
 docker pull ubuntu
 docker pull debian:jessie
