@@ -149,6 +149,24 @@ docker run -d -t --name Socket.io-Chat-APP ubuntu
 <br>
 <br>
 
+# Stats
+
+## Show hardware resources of container
+```bash
+docker stats
+```
+
+<br>
+<br>
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br>
+<br>
+
 
 # ps
 Show running Container
