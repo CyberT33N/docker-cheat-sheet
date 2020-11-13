@@ -100,7 +100,7 @@ docker stop <container-name/ID>
 <br>
 <br>
 
-# Run
+# Run (https://docs-stage.docker.com/engine/reference/commandline/run/)
 
 ## Create Docker Container with Ubuntu
 ```bash
@@ -321,3 +321,26 @@ volumes:
   mongodb_data_container:
 ```
 
+
+
+<br>
+<br>
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br>
+<br>
+
+# Change
+
+## Add new args to existing Container
+```bash
+# Step 1 - Create image of your container you want to update
+docker commit container_id image_name
+
+# Re-create Container with new args
+docker run -p 8080:8080 -td image_name
+```
