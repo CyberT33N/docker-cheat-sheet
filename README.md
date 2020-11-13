@@ -45,6 +45,9 @@ docker run -d -t --name Socket.io-Chat-APP ubuntu
 
 ## Username or UID (format: <name|uid>[:<group|gid>])
 --user , -u
+
+## Publish a container’s port(s) to the host. In this case first 80 port is from host and second 80 port is from docker container
+--publish , -p 80:80
 ```
 
 <br><br>_________________________________________________________
