@@ -168,6 +168,43 @@ docker ps
 <br>
 <br>
 
+# Commit
+
+## Create a image of existing container
+```bash
+docker commit container_id  svendowideit/testimage:version3
+```
+
+
+<br>
+<br>
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br>
+<br>
+
+# Images
+
+## Show existing images
+```bash
+docker images
+```
+
+
+<br>
+<br>
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br>
+<br>
 
 # Exec
 
