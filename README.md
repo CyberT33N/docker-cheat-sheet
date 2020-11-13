@@ -341,6 +341,9 @@ volumes:
 # Step 1 - Create image of your container you want to update
 docker commit container_id image_name
 
+# Step 2 - Stop old Container
+docker stop container_name
+
 # Re-create Container with new args
 docker run -p 8080:8080 -td image_name
 ```
