@@ -377,11 +377,6 @@ docker rmi <container-name/ID/name:tag>
 
 <br><br>
 
-## Create Docker Container with Ubuntu
-```bash
-docker run -d -t --name Socket.io-Chat-APP ubuntu
-```
-
 <br><br>
 ## Args
 ```bash
@@ -411,6 +406,15 @@ docker run -d -t --name Socket.io-Chat-APP ubuntu
 ## Publish a container’s port(s) to the host. In this case first 80 port is from host and second 80 port is from docker container
 --publish , -p 80:80
 ```
+
+
+<br><br>
+
+## Create Docker Container with Ubuntu and allocate pseudo-TTY
+```bash
+docker run -d --name test -it ubuntu
+```
+
 
 
 
@@ -556,6 +560,7 @@ docker images
 
 # Logs (https://docs.docker.com/engine/reference/commandline/logs/)
 - Show logs of your container
+- Only show log of main process
 ```bash
 docker logs container_name_here
 ```
