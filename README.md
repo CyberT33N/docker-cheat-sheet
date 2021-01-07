@@ -49,7 +49,7 @@ How to get started - official (https://www.youtube.com/watch?v=iqqDU2crIEQ&featu
 FROM node:12.16.1
 
 # Create a directory and use it as working directory.
-WORKINGDIR /code
+WORKDIR /code
 
 # Create environment variable. Those variables will be accessable by any process.
 ENV PORT 80
@@ -136,12 +136,20 @@ docker build
 
 ## tag (https://www.freecodecamp.org/news/an-introduction-to-docker-tags-9b5395636c2a/#:~:text=So%2C%20what%20exactly%20are%20Docker,of%20referring%20to%20your%20image.)
 - Docker tags convey useful information about a specific image version/variant
+- name:tag
+- -t or --tag
 ```bash
 # . <-- means catch docker file from the current directory
-docker build -t username/image_name:tag_name .
+docker build -t . namehere:taghere
 ```
 
 
+## file
+- Tells where the Dockerfile is located
+- -f or --file
+```bash
+docker build -f
+```
 
 
 
