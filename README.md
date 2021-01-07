@@ -20,6 +20,8 @@ Docker Cheat Sheet for the most needed stuff..
 
 
 # Hub aka Image Registry for Docker Container
+- Images are templates for docker container
+- Containers are your running images
 - https://hub.docker.com/search?q=&type=image
 
 
@@ -39,7 +41,7 @@ Docker Cheat Sheet for the most needed stuff..
 <br><br>
 
 # Dockerfile
-- This file is used to build your image.
+- This file is used to build your image. It will load your config of your Dockerfile and create your image based on this.
 
 <br>
 
@@ -166,10 +168,8 @@ docker login urlhere
 
 
 # Build (https://docs.docker.com/engine/reference/commandline/build/)
-- Build image from Dockerfile
-```bash
-docker build
-```
+- The docker build command builds Docker images from a Dockerfile and a “context
+
 
 ## tag (https://www.freecodecamp.org/news/an-introduction-to-docker-tags-9b5395636c2a/#:~:text=So%2C%20what%20exactly%20are%20Docker,of%20referring%20to%20your%20image.)
 - Docker tags convey useful information about a specific image version/variant
@@ -188,7 +188,7 @@ docker build -t . usernameORDomain/imagename
 - Tells where the Dockerfile is located. For default it chooses the current path.
 - -f or --file
 ```bash
-docker build -f
+docker build -f location here
 ```
 
 
@@ -373,6 +373,9 @@ docker rmi <container-name/ID/name:tag>
 <br><br>
 
 # Run (https://docs-stage.docker.com/engine/reference/commandline/run/)
+- The docker run command first creates a writeable container layer over the specified image, and then starts it using the specified command.
+
+<br><br>
 
 ## Create Docker Container with Ubuntu
 ```bash
@@ -584,9 +587,9 @@ docker log -f container_name_here
 
 <br><br>
 
-# Exec
+# Exec (https://docs-stage.docker.com/engine/reference/commandline/exec/)
 
-## Enter bash of Container
+## Enter terminal of Container
 ```bash
 docker exec -it samplename bash
 ```
