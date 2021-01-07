@@ -122,6 +122,18 @@ sudo apt install docker-ce
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
  _____________________________________________________
  _____________________________________________________
@@ -150,6 +162,14 @@ docker build -t . namehere
 ```bash
 docker build -f
 ```
+
+
+
+
+
+
+
+
 
 
 
@@ -189,6 +209,18 @@ docker pull myregistry.local:5000/testing/test-image
 
 
 
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+
+# Tag (https://docs.docker.com/engine/reference/commandline/tag/)
+```bash
+docker tag imagename tagname
+```
 
 
 
