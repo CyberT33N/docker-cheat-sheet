@@ -140,7 +140,7 @@ docker build
 - -t or --tag
 ```bash
 # . <-- means catch docker file from the current directory
-docker build -t . namehere:taghere
+docker build -t . namehere
 ```
 
 
