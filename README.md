@@ -101,9 +101,6 @@ CMD [ "node", "src/server.js" ]
 <br><br>
 
 
-
-
-
 # Install
 
 ## Ubuntu
@@ -116,16 +113,49 @@ sudo apt update
 sudo apt install docker-ce
 ```
 
-<br>
-<br>
 
 
+
+
+
+
+
+
+
+<br><br>
  _____________________________________________________
  _____________________________________________________
 
+<br><br>
 
-<br>
-<br>
+
+# Build (https://docs.docker.com/engine/reference/commandline/build/)
+```bash
+docker build
+```
+
+## tag (https://www.freecodecamp.org/news/an-introduction-to-docker-tags-9b5395636c2a/#:~:text=So%2C%20what%20exactly%20are%20Docker,of%20referring%20to%20your%20image.)
+- Docker tags convey useful information about a specific image version/variant
+```bash
+# . <-- means catch docker file from the current directory
+docker build -t username/image_name:tag_name .
+```
+
+
+
+
+
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
 
 # Pull (https://docs.docker.com/engine/reference/commandline/pull/)
 ```bash
@@ -134,6 +164,18 @@ docker pull debian:jessie
 docker pull ubuntu:14.04
 docker pull myregistry.local:5000/testing/test-image
 ```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br>
