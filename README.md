@@ -6,8 +6,8 @@ Docker Cheat Sheet for the most needed stuff..
 <br>
 
 # Guides
-Docker Containers 101 (https://www.youtube.com/watch?v=eGz9DS-aIeY)
-How to get started - official (https://www.youtube.com/watch?v=iqqDU2crIEQ&feature=youtu.be)
+- Docker Containers 101 (https://www.youtube.com/watch?v=eGz9DS-aIeY)
+- How to get started - official (https://www.youtube.com/watch?v=iqqDU2crIEQ&feature=youtu.be)
 
 
 
@@ -145,7 +145,7 @@ docker build -t . namehere:taghere
 
 
 ## file
-- Tells where the Dockerfile is located
+- Tells where the Dockerfile is located. For default it chooses the current path.
 - -f or --file
 ```bash
 docker build -f
