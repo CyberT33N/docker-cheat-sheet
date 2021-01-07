@@ -62,6 +62,9 @@ RUN npm install
 
 # Copy everything from local directory (.) to code folder
 COPY . /code
+
+# default commands to run, when starting Container
+CMD [ "node", "src/server.js" ]
 ```
 
 <br><br>
