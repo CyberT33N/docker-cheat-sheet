@@ -437,12 +437,18 @@ docker images
 
 <br><br>
 
-# Logs
+# Logs (https://docs.docker.com/engine/reference/commandline/logs/)
 - Show logs of your container
 ```bash
 docker logs container_name_here
 ```
 
+## follow
+- follow logs (monitor logs)
+- --follow or -f
+```bash
+docker log -f container_name_here
+```
 
 
 
