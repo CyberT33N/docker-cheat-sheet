@@ -190,6 +190,58 @@ docker pull myregistry.local:5000/testing/test-image
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+
+# Push (https://docs.docker.com/engine/reference/commandline/push/)
+- Push image to repo
+```bash
+docker push username/imagename
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
  _____________________________________________________
  _____________________________________________________
