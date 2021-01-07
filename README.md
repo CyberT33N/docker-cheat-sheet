@@ -10,6 +10,14 @@ Docker Cheat Sheet for the most needed stuff..
 - How to get started - official (https://www.youtube.com/watch?v=iqqDU2crIEQ&feature=youtu.be)
 
 
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+# Nice 2 know
+- alpine linux is the smallest OS and a lot of images support it! node and so on..
 
 
 <br><br>
