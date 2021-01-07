@@ -197,7 +197,7 @@ docker pull myregistry.local:5000/testing/test-image
 <br><br>
 
 # Start / Stop
-- If you do not specify a name docker will generate one for you which you can see at docker ps -a
+- You can see name/id at docker ps -a
 ```bash
 docker start <container-name/ID>
 docker stop <container-name/ID>
@@ -207,6 +207,28 @@ docker stop <container-name/ID>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+# Remove (rm)
+- Remove Docker Image
+```bash
+docker rm <container-name/ID>
+```
 
 
 
