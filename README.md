@@ -224,10 +224,19 @@ docker stop <container-name/ID>
 
 <br><br>
 
-# Remove (rm)
-- Remove Docker Image
+# Remove
+
+<br><br>
+
+- Remove Docker
 ```bash
 docker rm <container-name/ID>
+```
+<br><br>
+
+- Remove Image
+```bash
+docker rmi <container-name/ID/name:tag>
 ```
 
 
