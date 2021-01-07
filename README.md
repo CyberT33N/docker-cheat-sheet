@@ -186,33 +186,46 @@ docker pull myregistry.local:5000/testing/test-image
 
 
 
-<br>
-<br>
 
 
+
+
+<br><br>
  _____________________________________________________
  _____________________________________________________
 
-
-<br>
-<br>
+<br><br>
 
 # Start / Stop
+- If you do not specify a name docker will generate one for you which you can see at docker ps -a
 ```bash
 docker start <container-name/ID>
 docker stop <container-name/ID>
 ```
 
-<br>
-<br>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
  _____________________________________________________
  _____________________________________________________
 
-
-<br>
-<br>
+<br><br>
 
 # Run (https://docs-stage.docker.com/engine/reference/commandline/run/)
 
@@ -252,16 +265,26 @@ docker run -d -t --name Socket.io-Chat-APP ubuntu
 ```
 
 
-<br>
-<br>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
  _____________________________________________________
  _____________________________________________________
 
-
-<br>
-<br>
+<br><br>
 
 # Stats
 
@@ -270,35 +293,64 @@ docker run -d -t --name Socket.io-Chat-APP ubuntu
 docker stats
 ```
 
-<br>
-<br>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
  _____________________________________________________
  _____________________________________________________
 
-
-<br>
-<br>
+<br><br>
 
 
 # ps
 Show running Container
 ```bash
-docker ps
+# -a or -all means show all containers (default shows just running)
+docker ps -a
 ```
 
 
-<br>
-<br>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
  _____________________________________________________
  _____________________________________________________
 
-
-<br>
-<br>
+<br><br>
 
 # Commit
 
@@ -308,16 +360,27 @@ docker commit container_id svendowideit/testimage:version3
 ```
 
 
-<br>
-<br>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
  _____________________________________________________
  _____________________________________________________
 
-
-<br>
-<br>
+<br><br>
 
 # Images
 
@@ -327,16 +390,25 @@ docker images
 ```
 
 
-<br>
-<br>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
  _____________________________________________________
  _____________________________________________________
 
-
-<br>
-<br>
+<br><br>
 
 # Exec
 
