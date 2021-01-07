@@ -431,6 +431,29 @@ docker images
 
 
 
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+# Logs
+- Show logs of your container
+```bash
+docker logs container_name_here
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
