@@ -125,6 +125,30 @@ sudo apt install docker-ce
 
 
 
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+# login
+
+## login to official docker
+```bash
+docker login
+```
+
+<br><br>
+
+## login to remote
+```bash
+docker login urlhere
+```
+
+
+
+
+
 
 
 
@@ -142,6 +166,7 @@ sudo apt install docker-ce
 
 
 # Build (https://docs.docker.com/engine/reference/commandline/build/)
+- Build image from Dockerfile
 ```bash
 docker build
 ```
@@ -153,6 +178,9 @@ docker build
 ```bash
 # . <-- means catch docker file from the current directory
 docker build -t . namehere
+
+# If you later want to push to remote repo you may use
+docker build -t . usernameORDomain/imagename
 ```
 
 
@@ -242,7 +270,9 @@ docker tag imagename tagname
 
 # Push (https://docs.docker.com/engine/reference/commandline/push/)
 - Push image to repo
+- When you use docker login to connect to remote repo the command bellow will work aswell
 ```bash
+# push to docker website
 docker push username/imagename
 ```
 
