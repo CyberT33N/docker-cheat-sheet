@@ -649,8 +649,10 @@ docker-compose -v
 
 <br><br>
 ## Compose File
-- You must create a file called **docker-compose.yml** anywhere on your server.
 
+
+#### Third party images
+- You must create a file called **docker-compose.yml** anywhere on your server.
 ```yml
 version: '3.7'
 services:
@@ -659,6 +661,21 @@ services:
  database:
   image: redis
 ```
+
+#### Build from Dockerfile
+```yml
+version: '2'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web
+    ports:
+      - "8080:80"
+```
+
 
 <br><br>
 ## Check if **docker-compose.yml** is valid
