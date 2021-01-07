@@ -663,6 +663,7 @@ services:
 ```
 
 #### Build from Dockerfile
+- If your Image is called docker-test then by using container_name your new image name will be docker-test_web
 ```yml
 version: '2'
 
