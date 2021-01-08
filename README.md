@@ -975,17 +975,25 @@ exit
 <br>
 
 # Compose (Manage multiple container settings)
+- https://docs.docker.com/compose/
 - What is Docker Compose | How to create docker compose file | How to use Compose (https://www.youtube.com/watch?v=HUpIoF_conA)
 
 
-
 <br><br>
+
 ## Install
 ```bash
-## Install docker-compose
+# ubuntu
 sudo apt install docker-compose
 
-## Check if install was successfully
+# fedora
+sudo dnf install docker-compose
+```
+
+<br><br>
+
+## Get docker-compose version
+```bash
 docker-compose -v
 # docker-compose version
 # docker-compose --version
