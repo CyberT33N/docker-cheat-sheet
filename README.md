@@ -421,30 +421,34 @@ sudo docker rmi --force $(sudo docker ps -a -q)
 <br><br>
 ## Args
 ```bash
-## Amount of CPU you want to use for this container. In this case two and a half CPU
+# Amount of CPU you want to use for this container. In this case two and a half CPU
 --cpus 2.5
 
-## Name of the Container - Only [a-zA-Z0-9][a-zA-Z0-9_.-] are allowed.
+# Name of the Container - Only [a-zA-Z0-9][a-zA-Z0-9_.-] are allowed.
 --name samplename
 
-## Run container in background and print container ID
+# Run container in background and print container ID
 --detach , -d
 
-## Memory limit. In this case 512 MB
+# Set environment variables
+--env , -e
+
+# Memory limit. In this case 512 MB
 --memory , -m 512m
 
-## Enable unlimited Memory Swap
+# Enable unlimited Memory Swap
 --memory-swap -1
-## Use 2GB Memory Swap
+
+# Use 2GB Memory Swap
 --memory-swap 2048
 
-## Allocate a pseudo-TTY (teletype aka terminal)
+# Allocate a pseudo-TTY (teletype aka terminal)
 --tty , -t
 
-## Username or UID (format: <name|uid>[:<group|gid>])
+# Username or UID (format: <name|uid>[:<group|gid>])
 --user , -u
 
-## Publish a container’s port(s) to the host. In this case first 80 port is from host and second 80 port is from docker container
+# Publish a container’s port(s) to the host. In this case first 80 port is from host and second 80 port is from docker container
 --publish , -p 80:80
 
 
