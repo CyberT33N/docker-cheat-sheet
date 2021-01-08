@@ -975,6 +975,7 @@ exit
 <br>
 
 # Compose (Manage multiple container settings)
+- You must create a file called **docker-compose.yml** in the root of your project.
 - https://docs.docker.com/compose/
 - What is Docker Compose | How to create docker compose file | How to use Compose (https://www.youtube.com/watch?v=HUpIoF_conA)
 
@@ -1009,8 +1010,36 @@ docker-compose -v
 
 <br><br>
 
-#### Third party images
-- You must create a file called **docker-compose.yml** in the root of your project.
+
+
+
+
+## Example
+```yml
+version: "3.7" // https://docs.docker.com/compose/compose-file/
+
+services:
+  app: // container we run
+    image: node:12-alpine // image we create container from
+    command: sh -c "yarn install && yarn run dev" // terminal command which will be executed. on alpine there is no bash so we use sh
+    ports: // define outside and inside port
+      - 3000:3000
+    working_dir: /app // define working directory inside of container
+    volumes: // created volume. In this case current direct will be mapped to the app folder inside of container
+      - ./:/app
+    environment: // create environment variables
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: todos
+```
+
+
+<br><br>
+
+
+
+## Third party images
 ```yml
 version: '3.7'
 services:
@@ -1021,7 +1050,7 @@ services:
 ```
 
 
-#### Build from Dockerfile
+## Build from Dockerfile
 - If your Image is called docker-test then by using container_name your new image name will be docker-test_web and container name will be web
 ```yml
 version: '2'
@@ -1040,6 +1069,7 @@ services:
 
 
 <br><br>
+
 
 ## Build multiple Container
 ```yml
