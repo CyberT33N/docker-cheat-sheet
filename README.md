@@ -1002,11 +1002,15 @@ docker-compose -v
 
 
 <br><br>
-## Compose File
 
+
+## Compose File
+- https://docs.docker.com/compose/compose-file/ (In the compose file, we’ll start off by defining the schema version. In most cases, it’s best to use the latest supported version.)
+
+<br><br>
 
 #### Third party images
-- You must create a file called **docker-compose.yml** anywhere on your server.
+- You must create a file called **docker-compose.yml** in the root of your project.
 ```yml
 version: '3.7'
 services:
@@ -1109,16 +1113,32 @@ volumes:
 
 
 
-<br>
-<br>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
  _____________________________________________________
  _____________________________________________________
 
-
-<br>
-<br>
+<br><br>
 
 # Change
 
