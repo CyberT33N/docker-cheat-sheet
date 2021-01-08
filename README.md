@@ -1049,18 +1049,6 @@ volumes: // define the volume mapping for all containers
 <br><br>
 
 
-
-## Third party images
-```yml
-version: '3.7'
-services:
- web:
-  image: nginx
- database:
-  image: redis
-```
-
-
 ## Build from Dockerfile
 - If your Image is called docker-test then by using container_name your new image name will be docker-test_web and container name will be web
 ```yml
@@ -1121,6 +1109,7 @@ docker-compose config
 
 
 <br><br>
+
 ## Start
 ```bash
 sudo docker-compose up -d
@@ -1133,23 +1122,10 @@ sudo docker-compose down
 
 
 <br><br>
-## Hub
 
-#### MongoDB
-```yml
-services:
-  mongodb_container:
-    image: mongo:latest
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: testpw
-    ports:
-      - 27017:27017
-    volumes:
-      - mongodb_data_container:/data/db
-
-volumes:
-  mongodb_data_container:
+## Check logs from all containers into single stream
+```bash
+sudo docker-compose logs -f
 ```
 
 
