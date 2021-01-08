@@ -467,6 +467,13 @@ docker run -d --name test -it ubuntu
 ```
 
 
+## Run terminal command
+```bash
+# on alpine use sh cause bash does not exist
+docker run -d --name test -it ubuntu bash -c "your command here"
+```
+
+
 
 
 
