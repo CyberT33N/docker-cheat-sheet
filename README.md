@@ -1118,7 +1118,12 @@ sudo docker-compose up -d
 ## Shutdown
 ```bash
 sudo docker-compose down
+
+# By default, named volumes in your compose file are NOT removed when running docker-compose down. If you want to remove the volumes, you will need to add the --volumes flag.
+sudo docker-compose down --volumes
 ```
+
+
 
 
 <br><br>
