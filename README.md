@@ -870,8 +870,15 @@ sudo docker logs -f container_name_here
 
 ## Enter terminal of Container
 ```bash
+# example #1
 docker exec -it samplename bash
+
+# example #2
+docker exec -it <mysql-container-id> mysql -p
 ```
+
+<br><br>
+
 
 ## fix command not found error at clean debian container
 ```
