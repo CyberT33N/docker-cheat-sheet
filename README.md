@@ -668,11 +668,26 @@ docker images
 
 <br><br>
 
-## create volume
+## create named volume
 ```bash
 docker volume create todo-db
 ```
 
+## get details about named volume
+```bash
+docker volume inspect todo-db
+[
+    {
+        "CreatedAt": "2019-09-26T02:18:36Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/todo-db/_data",
+        "Name": "todo-db",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+```
 
 
 
