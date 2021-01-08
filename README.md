@@ -447,7 +447,7 @@ sudo docker rmi --force $(sudo docker ps -a -q)
 ## Publish a container’s port(s) to the host. In this case first 80 port is from host and second 80 port is from docker container
 --publish , -p 80:80
 
-# Bind mount a volume
+# Bind mount a volume. We will use the named volume and mount it to /etc/todos, which will capture all files created at the path.
 --volume , -v todo-db:/etc/todos
 ```
 
@@ -722,6 +722,7 @@ docker volume inspect todo-db
 
 - Bind mounts have been around since the early days of Docker. Bind mounts have limited functionality compared to volumes. When you use a bind mount, a file or directory on the host machine is mounted into a container. The file or directory is referenced by its absolute path on the host machine. By contrast, when you use a volume, a new directory is created within Docker’s storage directory on the host machine, and Docker manages that directory’s contents.
 
+- With bind mounts, we control the exact mountpoint on the host. We can use this to persist data, but is often used to provide additional data into containers. When working on an application, we can use a bind mount to mount our source code into the container to let it see code changes, respond, and let us see the changes right away.
 
 
 
