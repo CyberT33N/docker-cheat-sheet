@@ -827,11 +827,31 @@ docker run -d \
      -e MYSQL_DATABASE=todos \
      mysql:5.7
 
-# run second container with network "todo-app" and execute netshoot
+
+# run netshoot container with network "todo-app"
 docker run -it --network todo-app nicolaka/netshoot
+
 
 # Inside the container, we’re going to use the dig command, which is a useful DNS tool. We’re going to look up the IP address for the hostname mysql.
 dig mysql
+
+
+# run second container with node.
+# setting port outside with 3000 and inside too.
+# set workingdir to "app"
+# create volume for the current directory from the host in the container into the /app directory
+# connect to network "todo-app"
+# set environment variables for MySQL Host, User, PW & DB
+# run in terminal from container "yarn install && yarn run dev"
+docker run -dp 3000:3000 \
+   -w /app -v "$(pwd):/app" \
+   --network todo-app \
+   -e MYSQL_HOST=mysql \
+   -e MYSQL_USER=root \
+   -e MYSQL_PASSWORD=secret \
+   -e MYSQL_DB=todos \
+   node:12-alpine \
+   sh -c "yarn install && yarn run dev"
 ```
 
 
