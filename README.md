@@ -446,7 +446,11 @@ sudo docker rmi --force $(sudo docker ps -a -q)
 
 ## Publish a container’s port(s) to the host. In this case first 80 port is from host and second 80 port is from docker container
 --publish , -p 80:80
+
+# Bind mount a volume
+--volume , -v todo-db:/etc/todos
 ```
+
 
 
 <br><br>
