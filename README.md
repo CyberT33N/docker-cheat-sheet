@@ -817,6 +817,17 @@ docker network create todo-app
 - https://docs.docker.com/get-started/07_multi_container/
 - https://github.com/nicolaka/netshoot
 ```bash
+# run first container with mysql and assign network "todo-app" and create a netowkr-alias called "mysql"
+# create a volume called "todo-mysql-data" and set the path to "/var/lib/mysql"
+# create environment variables for password
+docker run -d \
+     --network todo-app --network-alias mysql \
+     -v todo-mysql-data:/var/lib/mysql \
+     -e MYSQL_ROOT_PASSWORD=secret \
+     -e MYSQL_DATABASE=todos \
+     mysql:5.7
+
+# run second container with network "todo-app" and execute netshoot
 docker run -it --network todo-app nicolaka/netshoot
 
 # Inside the container, we’re going to use the dig command, which is a useful DNS tool. We’re going to look up the IP address for the hostname mysql.
