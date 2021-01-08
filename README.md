@@ -1123,12 +1123,15 @@ sudo docker-compose down
 
 <br><br>
 
-## Check logs from all containers into single stream
+## Check logs
 ```bash
 sudo docker-compose logs
 
 # use the follow paramater to monitor the logs of your containers
 sudo docker-compose logs -f
+
+# check logs of specific container
+sudo docker-compose logs -f containername
 ```
 
 
