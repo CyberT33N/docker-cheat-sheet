@@ -262,7 +262,7 @@ docker pull myregistry.local:5000/testing/test-image
 <br><br>
 
 
-# Scan
+# Scan (https://docs.docker.com/engine/scan/)
 - When you have built an image, it is good practice to scan it for security vulnerabilities using the docker scan command. Docker has partnered with Snyk to provide the vulnerability scanning service.
 ```bash
 sudo docker scan getting-started
@@ -656,6 +656,14 @@ docker commit container_id svendowideit/testimage:version3
 ## Show existing images (https://docs.docker.com/engine/reference/commandline/image/)
 - Manage images
 
+<br><br>
+
+
+## Show history of image
+- Using the docker image history command, you can see the command that was used to create each layer within an image.
+```bash
+docker image history getting-started
+```
 
 
 
