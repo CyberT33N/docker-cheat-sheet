@@ -1136,6 +1136,13 @@ sudo docker-compose logs -f containername
 
 
 
+<br><br>
+
+## list all running containers
+```bash
+sudo docker-compose ps
+```
+
 
 
 
