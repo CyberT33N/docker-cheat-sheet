@@ -673,7 +673,10 @@ docker images
 docker volume create todo-db
 ```
 
+<br><br>
+
 ## get details about named volume
+- The Mountpoint is the actual location on the disk where the data is stored. Note that on most machines, you will need to have root access to access this directory from the host.
 ```bash
 docker volume inspect todo-db
 [
