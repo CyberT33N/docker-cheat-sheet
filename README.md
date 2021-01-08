@@ -755,14 +755,14 @@ docker volume inspect todo-db
 - Show logs of your container
 - Only show log of main process
 ```bash
-docker logs container_name_here
+sudo docker logs container_name_here
 ```
 
 ## follow
 - follow logs (monitor logs)
 - --follow or -f
 ```bash
-docker log -f container_name_here
+sudo docker logs -f container_name_here
 ```
 
 
