@@ -255,6 +255,28 @@ docker pull myregistry.local:5000/testing/test-image
 
 
 
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+
+# Scan
+- When you have built an image, it is good practice to scan it for security vulnerabilities using the docker scan command. Docker has partnered with Snyk to provide the vulnerability scanning service.
+```bash
+sudo docker scan getting-started
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
