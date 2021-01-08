@@ -448,9 +448,18 @@ sudo docker rmi --force $(sudo docker ps -a -q)
 --publish , -p 80:80
 
 
+
+
 # Bind mount a volume. We will use the named volume and mount it to /etc/todos, which will capture all files created at the path.
 --volume , -v todo-db:/etc/todos
-# -v $(pwd):/app - bind mount the current directory from the host in the container into the /app directory
+
+# bind mount the current directory from the host in the container into the /app directory
+-v $(pwd):/app
+
+# If volume "todo-mysql-data" was never created before it will be created automatically
+-v todo-mysql-data:/var/lib/mysql 
+
+
 
 
 # Working directory inside the container
@@ -745,6 +754,64 @@ docker volume inspect todo-db
 
 ## Create Dev Mode Container
 - https://docs.docker.com/get-started/06_bind_mounts/#starting-a-dev-mode-container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+# Networking (https://docs-stage.docker.com/engine/reference/commandline/network/)
+- Manage networks. You can use subcommands to create, inspect, list, remove, prune, connect, and disconnect networks.
+
+<br><br>
+
+## Golden Rules
+- **If two containers are on the same network, they can talk to each other. If they aren’t, they can’t.**
+- **There are two ways to put a container on a network: 1) Assign it at start or 2) connect an existing container**
+
+
+<br><br>
+
+## Create network
+```bash
+docker network create todo-app
+```
+
+
+
+
+
+
+
 
 
 
