@@ -638,6 +638,7 @@ docker images
 
 
 
+
 <br><br>
  _____________________________________________________
  _____________________________________________________
@@ -656,6 +657,25 @@ docker images
 - Volume drivers let you store volumes on remote hosts or cloud providers, to encrypt the contents of volumes, or to add other functionality.
 - New volumes can have their content pre-populated by a container.
 - Volumes on Docker Desktop have much higher performance than bind mounts from Mac and Windows hosts.
+
+<br><br>
+
+# create volume
+```bash
+docker volume create todo-db
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
