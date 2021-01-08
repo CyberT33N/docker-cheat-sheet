@@ -1032,6 +1032,17 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: secret
       MYSQL_DB: todos
+      
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - todo-mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: todos
+
+volumes: // define the volume mapping for all containers
+  todo-mysql-data: // set volume called "todo-mysql-data". By simply providing only the volume name, the default options are used. There are many more options available though (https://docs.docker.com/compose/compose-file/#volume-configuration-reference)
 ```
 
 
