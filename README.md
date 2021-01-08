@@ -447,8 +447,14 @@ sudo docker rmi --force $(sudo docker ps -a -q)
 ## Publish a container’s port(s) to the host. In this case first 80 port is from host and second 80 port is from docker container
 --publish , -p 80:80
 
+
 # Bind mount a volume. We will use the named volume and mount it to /etc/todos, which will capture all files created at the path.
 --volume , -v todo-db:/etc/todos
+# -v $(pwd):/app - bind mount the current directory from the host in the container into the /app directory
+
+
+# Working directory inside the container
+--workdir , -w	
 ```
 
 
