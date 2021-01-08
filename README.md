@@ -678,6 +678,7 @@ services:
   image: redis
 ```
 
+
 #### Build from Dockerfile
 - If your Image is called docker-test then by using container_name your new image name will be docker-test_web and container name will be web
 ```yml
@@ -694,7 +695,42 @@ services:
 ```
 
 
+
+
 <br><br>
+
+## Build multiple Container
+```yml
+version: '2'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web
+    ports:
+      - "8080:8080"
+
+  db:
+    image: mongo:3.6.1
+    container_name: db
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    ports:
+      - 27017:27017
+    command: mongod
+
+volumes:
+  mongodb:
+  mongodb_config:
+```
+
+
+<br><br>
+
+
 ## Check if **docker-compose.yml** is valid
 ```bash
 docker-compose config
