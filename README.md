@@ -993,7 +993,7 @@ sudo dnf install docker-compose
 
 <br><br>
 
-## Get docker-compose version
+## Get docker-compose versiondocker-compose
 ```bash
 docker-compose -v
 # docker-compose version
@@ -1125,6 +1125,9 @@ sudo docker-compose down
 
 ## Check logs from all containers into single stream
 ```bash
+sudo docker-compose logs
+
+# use the follow paramater to monitor the logs of your containers
 sudo docker-compose logs -f
 ```
 
