@@ -341,6 +341,12 @@ docker stop <container-name/ID>
 ```
 
 
+## Stop all running container
+```bash
+sudo docker stop $(sudo docker ps -a -q)
+```
+
+
 
 
 
@@ -365,17 +371,29 @@ docker stop <container-name/ID>
 
 <br><br>
 
-- Remove Docker
+- Remove container
 ```bash
-docker rm <container-name/ID>
+sudo docker rm <container-name/ID>
 ```
+
+- Remove all container
+```bash
+sudo docker rm $(sudo docker ps -a -q)
+```
+
+
 <br><br>
 
-- Remove Image
+
+- Remove image
 ```bash
-docker rmi <container-name/ID/name:tag>
+sudo docker rmi <container-name/ID/name:tag>
 ```
 
+- Remove all images
+```bash
+sudo docker rmi $(sudo docker ps -a -q)
+```
 
 
 
