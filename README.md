@@ -632,6 +632,47 @@ docker images
 
 
 
+
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+# Volumes (https://docs.docker.com/storage/volumes/)
+- volumes are completely managed by Docker and do not depend on the directory structure and OS of the host machine.
+
+
+
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+# bind mounts (https://docs.docker.com/storage/bind-mounts/)
+- bind mounts are dependent on the directory structure and OS of the host machine
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
  _____________________________________________________
  _____________________________________________________
