@@ -807,7 +807,15 @@ docker volume inspect todo-db
 
 ## Create network
 ```bash
-docker network create todo-app
+sudo docker network create todo-app
+```
+
+
+<br><br>
+
+## Show all network
+```bash
+sudo docker network ls
 ```
 
 
