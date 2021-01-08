@@ -546,6 +546,45 @@ docker commit container_id svendowideit/testimage:version3
 
 
 
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+# Container
+
+## Show existing images (https://docs.docker.com/engine/reference/commandline/image/)
+- Manage containers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+ _____________________________________________________
+ _____________________________________________________
+
+<br><br>
+
+# Image
+
+## Show existing images (https://docs.docker.com/engine/reference/commandline/image/)
+- Manage images
+
 
 
 
@@ -558,7 +597,7 @@ docker commit container_id svendowideit/testimage:version3
 
 # Images
 
-## Show existing images
+## Show existing images (https://docs.docker.com/engine/reference/commandline/images/)
 ```bash
 docker images
 ```
