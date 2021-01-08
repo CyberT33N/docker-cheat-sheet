@@ -378,7 +378,7 @@ sudo docker rm <container-name/ID>
 
 - Remove all container
 ```bash
-sudo docker rm $(sudo docker ps -a -q)
+sudo docker rm --force $(sudo docker ps -a -q)
 ```
 
 
@@ -392,7 +392,7 @@ sudo docker rmi <container-name/ID/name:tag>
 
 - Remove all images
 ```bash
-sudo docker rmi $(sudo docker ps -a -q)
+sudo docker rmi --force $(sudo docker ps -a -q)
 ```
 
 
