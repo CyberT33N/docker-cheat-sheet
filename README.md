@@ -807,6 +807,20 @@ docker network create todo-app
 ```
 
 
+<br><br>
+
+## Connect two container to same MySQL DB
+- https://docs.docker.com/get-started/07_multi_container/
+- https://github.com/nicolaka/netshoot
+```bash
+docker run -it --network todo-app nicolaka/netshoot
+
+# Inside the container, we’re going to use the dig command, which is a useful DNS tool. We’re going to look up the IP address for the hostname mysql.
+dig mysql
+```
+
+
+
 
 
 
