@@ -672,6 +672,9 @@ docker images
 # bind mounts (https://docs.docker.com/storage/bind-mounts/)
 - bind mounts are dependent on the directory structure and OS of the host machine
 
+<br>
+
+- Bind mounts have been around since the early days of Docker. Bind mounts have limited functionality compared to volumes. When you use a bind mount, a file or directory on the host machine is mounted into a container. The file or directory is referenced by its absolute path on the host machine. By contrast, when you use a volume, a new directory is created within Docker’s storage directory on the host machine, and Docker manages that directory’s contents.
 
 
 
