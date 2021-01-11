@@ -198,6 +198,8 @@ CMD [ "node", "src/server.js" ]
 
 ## Dockerizing a Node.js web app (Best way)
 - https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+- http://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/
+- https://blog.npmjs.org/post/171556855892/introducing-npm-ci-for-faster-more-reliable
 
 
 <br>
