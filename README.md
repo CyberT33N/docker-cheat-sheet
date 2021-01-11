@@ -1204,6 +1204,7 @@ sudo dnf install docker-compose
 
 
 
+
 <br><br>
 ## Networking in Compose
 - By default Compose sets up a single network for your app. Each container for a service joins the default network and is both reachable by other containers on that network, and discoverable by them at a hostname identical to the container name.
@@ -1238,6 +1239,11 @@ When you run docker-compose up, the following happens:
 - It is important to note the distinction between HOST_PORT and CONTAINER_PORT. In the above example, for db, the HOST_PORT is 8001 and the container port is 5432 (postgres default). Networked service-to-service communication uses the CONTAINER_PORT. When HOST_PORT is defined, the service is accessible outside the swarm as well.
 
 - Within the web container, your connection string to db would look like postgres://db:5432, and from the host machine, the connection string would look like postgres://{DOCKER_IP}:8001.
+
+
+
+
+
 
 
 <br><br>
@@ -1313,6 +1319,11 @@ docker-compose run -e DEBUG web python console.py
 
 
 
+
+
+
+
+
 <br><br>
 
 
@@ -1322,6 +1333,9 @@ docker-compose -v
 # docker-compose version
 # docker-compose --version
 ```
+
+
+
 
 
 
@@ -1390,6 +1404,11 @@ services:
 
 
 
+
+
+
+
+
 <br><br>
 
 
@@ -1422,6 +1441,10 @@ volumes:
 ```
 
 
+
+
+
+
 <br><br>
 
 
@@ -1449,6 +1472,8 @@ sudo docker-compose down --volumes
 
 
 
+
+
 <br><br>
 
 ## Check logs
@@ -1464,12 +1489,48 @@ sudo docker-compose logs -f containername
 
 
 
+
+
 <br><br>
 
 ## list all running containers
 ```bash
 sudo docker-compose ps
 ```
+
+
+
+
+
+
+
+
+<br><br>
+
+## Control startup and shutdown order in Compose (https://docs.docker.com/compose/startup-order/)
+- You can control the order of service startup and shutdown with the depends_on option. Compose always starts and stops containers in dependency order, where dependencies are determined by depends_on, links, volumes_from, and network_mode: "service:...".
+- https://github.com/vishnubob/wait-for-it
+```bash
+version: "2"
+services:
+  web:
+    build: .
+    ports:
+      - "80:8000"
+    depends_on:
+      - "db"
+    command: ["./wait-for-it.sh", "db:5432", "--", "python", "app.py"]
+  db:
+    image: postgres
+```
+
+
+
+
+
+
+
+
 
 
 
