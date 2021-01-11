@@ -169,6 +169,33 @@ CMD [ "node", "src/server.js" ]
 
 # Layer Caching (https://docs.docker.com/get-started/09_image_best/#layer-caching)
 
+<br>
+
+Dockerfile:
+```bash
+# before caching
+FROM node:12-alpine
+WORKDIR /app
+COPY . .
+RUN yarn install --production
+CMD ["node", "src/index.js"]
+
+# after caching
+FROM node:12-alpine
+WORKDIR /app
+COPY package.json yarn.lock ./
+RUN yarn install --production
+COPY . .
+CMD ["node", "src/index.js"]
+```
+
+
+<br>
+
+.dockerignore:
+```bash
+node_modules
+```
 
 
 
