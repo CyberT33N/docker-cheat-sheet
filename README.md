@@ -1212,6 +1212,14 @@ sudo dnf install docker-compose
 
 ## Environment variables
 
+#### priority used by Compose
+- 1. Compose file
+- 2. Shell environment variables
+- 3. Environment file
+- 4. Dockerfile
+- 5. Variable is not defined
+
+
 #### Substitute environment variables in Compose files
 - By default, the docker-compose command will look for a file named .env in the directory you run the command. By passing the file as an argument, you can store it anywhere and name it appropriately, for example:
 ```bash
