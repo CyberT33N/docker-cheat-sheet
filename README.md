@@ -1218,6 +1218,22 @@ sudo dnf install docker-compose
 docker-compose --env-file ./config/.env.dev up 
 ```
 
+
+#### The “.env” file
+- You can set default values for any environment variables referenced in the Compose file, or used to configure Compose, in an environment file named .env:
+```bash
+$ cat .env
+TAG=v1.5
+
+$ cat docker-compose.yml
+version: '3'
+services:
+  web:
+    image: "webapp:${TAG}"
+```
+
+
+
 #### Set environment variables in containers
 - You can set environment variables in a service’s containers with the ‘environment’ key, just like with docker run -e VARIABLE=VALUE ...:
 ```bash
