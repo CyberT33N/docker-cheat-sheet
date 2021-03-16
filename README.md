@@ -427,6 +427,13 @@ docker version
 
 # Build (https://docs.docker.com/engine/reference/commandline/build/)
 - The docker build command builds Docker images from a Dockerfile and a “context
+```bash
+# . <-- means catch docker file from the current directory
+docker build .
+```
+
+
+
 
 
 ## tag (https://www.freecodecamp.org/news/an-introduction-to-docker-tags-9b5395636c2a/#:~:text=So%2C%20what%20exactly%20are%20Docker,of%20referring%20to%20your%20image.)
