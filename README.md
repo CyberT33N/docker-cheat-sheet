@@ -442,10 +442,10 @@ docker build .
 - -t or --tag
 ```bash
 # . <-- means catch docker file from the current directory
-docker build -t . namehere
+docker build . -t namehere
 
 # If you later want to push to remote repo you may use
-docker build -t . usernameORDomain/imagename
+docker build . -t usernameORDomain/imagename
 ```
 
 
