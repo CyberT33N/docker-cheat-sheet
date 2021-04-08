@@ -193,12 +193,51 @@ COPY . /code
 CMD [ "node", "src/server.js" ]
 ```
 
+<br><br>
 
 ## Define variable
 ```bash
 ARG myvalue=3
 RUN echo $myvalue > /test
 ```
+
+
+
+<br><br>
+
+## Install
+
+<br><br>
+
+#### NVM
+```
+# Install node
+ENV NODE_VERSION 14
+ENV NVM_DIR /usr/local/nvm
+RUN mkdir -p $NVM_DIR && \
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash && \
+    . $NVM_DIR/nvm.sh && \
+    nvm alias default $NODE_VERSION && \
+    nvm use default && \
+    ln -s $NVM_DIR/versions/node/$(nvm run node --version | tail -1)/bin /node_bin
+ENV NODE_PATH $NVM_DIR/lib/node_modules
+ENV PATH /node_bin:$PATH
+
+RUN node --version && exit
+```
+
+<br><br>
+
+#### Java
+```
+ARG JAVA_VERSION=openjdk-ri@1.8.41-04
+RUN curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | \
+    JABBA_COMMAND="install ${JAVA_VERSION} -o /jdk" bash
+ENV JAVA_HOME /jdk
+ENV INSTALL4J_JAVA_HOME $JAVA_HOME
+ENV PATH $JAVA_HOME/bin:$PATH
+```
+
 
 <br><br>
 
