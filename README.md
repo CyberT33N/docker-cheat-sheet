@@ -193,6 +193,13 @@ COPY . /code
 CMD [ "node", "src/server.js" ]
 ```
 
+
+## Define variable
+```bash
+ARG myvalue=3
+RUN echo $myvalue > /test
+```
+
 <br><br>
 
 
