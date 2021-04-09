@@ -245,12 +245,9 @@ RUN node --version && exit
 
 #### Java
 ```
-ARG JAVA_VERSION=openjdk-ri@1.8.41-04
-RUN curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | \
-    JABBA_COMMAND="install ${JAVA_VERSION} -o /jdk" bash
-ENV JAVA_HOME /jdk
-ENV INSTALL4J_JAVA_HOME $JAVA_HOME
-ENV PATH $JAVA_HOME/bin:$PATH
+RUN apt-get install -y openjdk-8-jdk && \
+    apt-get install -y ant && \
+    apt-get clean;
 ```
 
 
