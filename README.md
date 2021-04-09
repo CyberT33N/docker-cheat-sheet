@@ -224,7 +224,7 @@ ADD ./sample.txt /dockerfolder/
 
 <br><br>
 
-#### NVM
+#### NVM & Node
 ```
 # Install node
 ENV NODE_VERSION 14
