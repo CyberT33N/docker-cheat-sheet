@@ -203,6 +203,21 @@ RUN echo $myvalue > /test
 
 
 
+
+<br><br>
+
+## Copy folder/file from host to docker container
+```bash
+ADD ./hostfolder /dockerfolder/
+ADD ./sample.txt /dockerfolder/
+```
+
+
+
+
+
+
+
 <br><br>
 
 ## Install
