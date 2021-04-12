@@ -144,7 +144,11 @@ apt-get update; apt-get install curl
 
 
 
-
+# Check available versions here: https://www.ubuntuupdates.org/package/google_chrome/stable/main/base/google-chrome-stable
+ARG CHROME_VERSION="77.0.3865.120-1"
+RUN wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb \
+  && apt-get install -y /tmp/chrome.deb \
+  && rm /tmp/chrome.deb
 
 
 
@@ -248,6 +252,30 @@ RUN node --version && exit
 RUN apt-get install -y openjdk-8-jdk && \
     apt-get install -y ant && \
     apt-get clean;
+```
+
+
+<br><br>
+
+
+#### Chrome
+```
+# Install Chrome (WARNING: ALWAYS INSTALLS THE LATEST VERSION => builds not reproducable)
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+    echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list && \
+    apt-get update && \
+    apt-get install -y google-chrome-stable && \
+    rm -rf /var/lib/apt/lists/*
+
+
+# ------------------------------------------------------
+
+
+# Check available versions here: https://www.ubuntuupdates.org/package/google_chrome/stable/main/base/google-chrome-stable
+ARG CHROME_VERSION="77.0.3865.120-1"
+RUN wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb \
+  && apt-get install -y /tmp/chrome.deb \
+  && rm /tmp/chrome.deb
 ```
 
 
