@@ -954,7 +954,9 @@ docker commit container_id svendowideit/testimage:version3
 # Container
 
 ## Show existing images (https://docs.docker.com/engine/reference/commandline/image/)
-- Manage containers
+```bash
+sudo docker container -ls
+```
 
 
 
@@ -982,7 +984,10 @@ docker commit container_id svendowideit/testimage:version3
 # Image
 
 ## Show existing images (https://docs.docker.com/engine/reference/commandline/image/)
-- Manage images
+```bash
+sudo docker image -ls
+```
+
 
 <br><br>
 
