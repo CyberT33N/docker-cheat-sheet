@@ -174,7 +174,7 @@ RUN wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/
 <br>
 
 
-```bash
+```Dockerfile
 # You can use a image from hub or your own one. We start with this image and will build on top of it.
 FROM node:12.16.1
 
@@ -200,7 +200,7 @@ CMD [ "node", "src/server.js" ]
 <br><br>
 
 ## Define variable
-```bash
+```Dockerfile
 ARG myvalue=3
 RUN echo $myvalue > /test
 ```
@@ -211,7 +211,7 @@ RUN echo $myvalue > /test
 <br><br>
 
 ## Copy folder/file from host to docker container
-```bash
+```Dockerfile
 ADD ./hostfolder /dockerfolder/
 ADD ./sample.txt /dockerfolder/
 ```
@@ -229,7 +229,7 @@ ADD ./sample.txt /dockerfolder/
 <br><br>
 
 #### NVM & Node
-```
+```Dockerfile
 # Install node
 ENV NODE_VERSION 14
 ENV NVM_DIR /usr/local/nvm
