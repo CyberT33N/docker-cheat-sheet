@@ -1814,6 +1814,96 @@ docker save $(docker images -q) -o socket.io-chat-app-full.tar
 ```
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+
+
+ _____________________________________________________
+ _____________________________________________________
+
+
+<br>
+<br>
+
+# Known Error fixes
+- Errors were encountered while processing: docker-ce
+  E: Sub-process /usr/bin/dpkg returned an error code (1)
+  - You can turn of your VPN. If this is not working try:
+  ```javascript
+  sudo systemctl restart systemd-networkd.service # (disconnected network)
+  sudo apt remove docker-ce # If you hadn't done so before
+  sudo apt install docker-ce # Should start docker.service
+  sudo systemctl status docker.service  # Verify docker.service is running
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br>
 <br>
 
@@ -1828,7 +1918,6 @@ docker save $(docker images -q) -o socket.io-chat-app-full.tar
 # FAQ
 
 ## How to fix docker: Got permission denied issue
-
 ```bash
 sudo chmod 666 /var/run/docker.sock
 ```
