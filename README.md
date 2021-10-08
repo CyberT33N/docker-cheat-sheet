@@ -18,6 +18,28 @@ sudo apt install docker-ce
 
 
 
+## Docker Compose (https://docs.docker.com/compose/install/)
+
+#### Ubuntu
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+docker-compose --version
+```
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br>
+
+
 
 ## How to install packages inside of your Container
 ```bash
