@@ -1383,6 +1383,14 @@ docker exec -it <mysql-container-id> mysql -p
 <br><br>
 
 
+## Copy file to running container
+```bash
+sudo docker cp "/home/usernamehere/Documents/tmpEmbedDump.csv"  mongomain:"tmpEmbedDump.csv"
+```
+
+<br><br>
+
+
 ## fix command not found error at clean debian container
 ```
 apt-get update && apt-get -y install sudo
