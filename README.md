@@ -1378,6 +1378,10 @@ docker exec -it samplename bash
 
 # example #2
 docker exec -it <mysql-container-id> mysql -p
+
+# example 3
+ sudo docker exec -it mongomain bash -c "pwd"
+
 ```
 
 <br><br>
