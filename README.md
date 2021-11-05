@@ -1941,10 +1941,12 @@ Hub List
 <br><br>
 
 ## Hub
-```javascript
+```bash
 sudo docker pull mongo
 sudo docker run -d -p 1337:27017 --name mongomain -d mongo:latest
-# You can now access Mongo DB as example with Compass by using this string: mongodb://localhost:2717
+
+# You can now access Mongo DB as example with Compass by using this string:
+# - mongodb://localhost:1337/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
 ```
 
 <br><br>
