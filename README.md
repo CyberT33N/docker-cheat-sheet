@@ -1514,6 +1514,41 @@ sudo dnf install docker-compose
 
 
 <br><br>
+
+
+## Health Check
+- It is important that you use depends_on and condition
+```bash
+version: '3.9'
+services:
+    elasticsearch:
+        image: docker.elastic.co/elasticsearch/elasticsearch:5.4.3
+        healthcheck:
+            test: |
+                curl -X PUT elasticsearch:9200/scheduled_actions -H "ContentType: application/json" -d '{"settings":{"index":{"number_of_shards":'1',"number_of_replicas":'0'}}}' &&
+                curl --silent --fail localhost:9200/_cat/health ||
+                exit 1
+            interval: 11s 
+            timeout: 10s 
+            retries: 3
+        environment:
+            - discovery.type=single-node
+            - ES_JAVA_OPTS=-Xms1g -Xmx1g
+            - xpack.security.enabled=false
+    main:
+        image: alpine
+        depends_on:
+            elasticsearch:
+                condition: service_healthy
+```
+
+<br><br>
+
+
+
+
+
+
 ## Networking in Compose
 - By default Compose sets up a single network for your app. Each container for a service joins the default network and is both reachable by other containers on that network, and discoverable by them at a hostname identical to the container name.
 - Your app’s network is given a name based on the “project name”, which is based on the name of the directory it lives in. You can override the project name with either the --project-name flag or the COMPOSE_PROJECT_NAME environment variable.
