@@ -821,6 +821,10 @@ sudo docker rmi <container-name/ID/name:tag>
 
 - Remove all images
 ```bash
+# Method #1
+sudo docker rmi -f $(sudo docker images -aq)
+
+# Method #2
 sudo docker rmi --force $(sudo docker ps -a -q)
 ```
 
