@@ -1487,18 +1487,35 @@ exit
 ```
 
 
-<br>
-<br>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
  _____________________________________________________
  _____________________________________________________
 
-
 <br>
 <br>
 
-# Compose (Manage multiple container settings)
+# docker-compose (Manage multiple container settings)
 - You must create a file called **docker-compose.yml** in the root of your project.
 - https://docs.docker.com/compose/
 - What is Docker Compose | How to create docker compose file | How to use Compose (https://www.youtube.com/watch?v=HUpIoF_conA)
@@ -1513,6 +1530,52 @@ sudo apt install docker-compose
 
 # fedora
 sudo dnf install docker-compose
+```
+
+<br><br>
+
+## Extend from other files
+```bash
+# docker-compose.yml
+networks:
+  default:
+    external:
+      name: localdev
+
+services:
+  gitlab:
+    extends:
+      file: services/gitlab/service.yml
+      service: web
+
+     
+     
+     
+     
+     
+     
+     
+# services/gitlab/service.yml
+version: '3.6'
+
+services:
+  web:
+    image: 'gitlab/gitlab-ee:latest'
+    restart: always
+    hostname: 'gitlab.local.com'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab.local.com'
+        # Add any other gitlab.rb configuration here, each on its own line
+    ports:
+      - '80:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - '$GITLAB_HOME/config:/etc/gitlab'
+      - '$GITLAB_HOME/logs:/var/log/gitlab'
+      - '$GITLAB_HOME/data:/var/opt/gitlab'
+    shm_size: '256m'
 ```
 
 
