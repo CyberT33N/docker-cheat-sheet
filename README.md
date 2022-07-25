@@ -1606,6 +1606,52 @@ services:
 
 
 
+
+
+
+
+<br><br>
+
+
+
+## Pass environment variable to docker file for --build-arg
+```bash
+docker:backend:
+  extends: .docker
+  stage: stage1
+  variables:
+    DOCKER_FILE: Dockerfile.nodejs
+    NODE_APP_DIR: "test/apple"
+```
+
+Dockerfile.nodejs
+```
+FROM node:16.2.0-alpine3.13
+
+# Sets node env to production, so that npm ci doesn't install the devDependencies
+ENV NODE_ENV=production
+ARG NODE_APP_DIR=${NODE_APP_DIR}
+
+# Copy the node app and kernel modules etc into the docker image
+ADD . /test
+WORKDIR /test
+
+# Install the node-app's dependencies
+RUN bash ./npm-all.sh ci
+
+# Change the workdirectory to where the node-app is located now
+WORKDIR $NODE_APP_DIR
+
+CMD echo "Current file path: " && pwd && npm start
+```
+     
+     
+     
+
+
+
+
+
 <br><br>
 
 
