@@ -600,6 +600,8 @@ docker build .
 
 
 
+<br><br>
+
 
 ## tag (https://www.freecodecamp.org/news/an-introduction-to-docker-tags-9b5395636c2a/#:~:text=So%2C%20what%20exactly%20are%20Docker,of%20referring%20to%20your%20image.)
 - Docker tags convey useful information about a specific image version/variant
@@ -620,6 +622,35 @@ docker build . -t usernameORDomain/imagename
 ```bash
 docker build -f location here
 ```
+
+
+
+<br><br>
+
+
+
+## build from specific Dockerfile
+```bash
+sudo docker build - < Dockerfile.test
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
