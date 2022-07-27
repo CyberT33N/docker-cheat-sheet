@@ -426,6 +426,7 @@ node_modules
 
 
 
+
 <br><br>
  _____________________________________________________
  _____________________________________________________
@@ -631,7 +632,7 @@ docker build -f location here
 
 ## build from specific Dockerfile
 ```bash
-sudo docker build - < Dockerfile.test
+sudo docker build - < Dockerfile.test -t yourTagNameHere
 ```
 
 
