@@ -2318,4 +2318,9 @@ newgrp docker
 
 # Verify that you can run docker commands without sudo.
 docker run hello-world
+
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "$HOME/.docker" -R
+
+sudo usermod -aG docker $USER && newgrp docker
 ```
