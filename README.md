@@ -29,10 +29,8 @@ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker c
 ```
 
 
-
+Install Docker Engine
 ```
-
-
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -54,11 +52,20 @@ sudo systemctl start docker
 ```
 
 Install NVIDIA Container Toolkit
+- https://github.com/CyberT33N/docker-cheat-sheet/blob/main/README.md#nvidia-container-toolkit
 
+
+Check if worked:
+```
+sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
+```
 
 
 
 <br><br>
+
+---
+
 <br><br>
 
 
