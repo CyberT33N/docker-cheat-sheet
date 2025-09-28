@@ -8,9 +8,29 @@ Docker Cheat Sheet for the most needed stuff..
 
 ## Ubuntu
 - https://docs.docker.com/engine/install/ubuntu/
+- https://forums.docker.com/t/cant-start-containers-with-gpu-access-on-linux-mint/144606/4
+  - **In Bezug auf diesen Beitrag scheint Docker Desktop nicht mit GPU-Support zu funktionieren. Daher **MUSS** man Docker Engine auf Linux installieren.**
+
+Uninstall Docker Desktop
+```shell
+sudo apt remove docker-desktop
+
+sudo rm -rf ~/.docker #plus any other places there's docker config
+sudo rm /usr/local/bin/com.docker.cli
+sudo apt purge docker-desktop
+
+sudo apt remove docker docker-engine docker.io containerd runc
+sudo apt update
+```
+
+Uninstall other docker rest over:
+```shell
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+```
+
+
 
 ```
-for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 
 
 # Add Docker's official GPG key:
@@ -33,7 +53,12 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo systemctl start docker
 ```
 
+Install NVIDIA Container Toolkit
 
+
+
+
+<br><br>
 <br><br>
 
 
@@ -62,6 +87,9 @@ Configure:
 ```
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
+
+sudo nvidia-ctk runtime configure --runtime=containerd
+sudo systemctl restart containerd
 ```
 
 
