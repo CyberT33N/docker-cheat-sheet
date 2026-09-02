@@ -1,0 +1,21 @@
+# docker swarm ca
+
+Display and rotate the root CA.
+
+## Usage
+
+```text
+docker swarm ca [OPTIONS]
+```
+
+## Options
+
+| Option | Description |
+|---|---|
+| `--ca-cert pem-file` | Path to the PEM-formatted root CA certificate to use for the new cluster |
+| `--ca-key pem-file` | Path to the PEM-formatted root CA key to use for the new cluster |
+| `--cert-expiry duration` | Validity period for node certificates (ns\|us\|ms\|s\|m\|h) (default 2160h0m0s) |
+| `-d, --detach` | Exit immediately instead of waiting for the root rotation to converge |
+| `--external-ca external-ca` | Specifications of one or more certificate signing endpoints |
+| `-q, --quiet` | Suppress progress output |
+| `--rotate` | Rotate the swarm CA - if no certificate or key are provided, new ones will be generated |

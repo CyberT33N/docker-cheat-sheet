@@ -1,0 +1,19 @@
+# docker model bench
+
+Benchmark a model's performance showing tokens per second at different concurrency levels. Runs a series of benchmarks with 1, 2, 4, and 8 concurrent requests by default, measuring the tokens per second (TPS) that the model can generate.
+
+## Usage
+
+```text
+docker model bench MODEL
+```
+
+## Options
+
+| Option | Description |
+|---|---|
+| `--concurrency ints` | Concurrency levels to test (default [1,2,4,8]) |
+| `--duration duration` | Duration to run each concurrency test (default 30s) |
+| `--json` | Output results in JSON format |
+| `--prompt string` | Prompt to use for benchmarking (default "Write a comprehensive 100 word summary on whales and their impact on society.") |
+| `--timeout duration` | Timeout for each individual request (default 5m0s) |

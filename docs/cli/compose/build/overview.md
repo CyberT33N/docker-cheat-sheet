@@ -1,0 +1,28 @@
+# docker compose build
+
+Build or rebuild services.
+
+## Usage
+
+```text
+docker compose build [OPTIONS] [SERVICE...]
+```
+
+## Options
+
+| Option | Description |
+|---|---|
+| `--build-arg stringArray` | Set build-time variables for services |
+| `--builder string` | Set builder to use |
+| `--check` | Check build configuration |
+| `--dry-run` | Execute command in dry run mode |
+| `-m, --memory bytes` | Set memory limit for the build container. Not supported by BuildKit. |
+| `--no-cache` | Do not use cache when building the image |
+| `--print` | Print equivalent bake file |
+| `--provenance string` | Add a provenance attestation |
+| `--pull` | Always attempt to pull a newer version of the image |
+| `--push` | Push service images |
+| `-q, --quiet` | Suppress the build output |
+| `--sbom string` | Add a SBOM attestation |
+| `--ssh string` | Set SSH authentications used when building service images. (use 'default' for using your default SSH Agent) |
+| `--with-dependencies` | Also build dependencies (transitively) |

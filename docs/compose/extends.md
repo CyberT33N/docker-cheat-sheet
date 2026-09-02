@@ -1,0 +1,39 @@
+# Extend from other files
+
+```yaml
+# docker-compose.yml
+networks:
+  default:
+    external:
+      name: localdev
+
+services:
+  gitlab:
+    extends:
+      file: services/gitlab/service.yml
+      service: web
+```
+
+```yaml
+# services/gitlab/service.yml
+version: '3.6'
+
+services:
+  web:
+    image: 'gitlab/gitlab-ee:latest'
+    restart: always
+    hostname: 'gitlab.local.com'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab.local.com'
+        # Add any other gitlab.rb configuration here, each on its own line
+    ports:
+      - '80:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - '$GITLAB_HOME/config:/etc/gitlab'
+      - '$GITLAB_HOME/logs:/var/log/gitlab'
+      - '$GITLAB_HOME/data:/var/opt/gitlab'
+    shm_size: '256m'
+```

@@ -1,0 +1,18 @@
+# docker model gateway
+
+Run an OpenAI-compatible LLM gateway that routes requests to configured providers. Supported providers include Docker Model Runner, Ollama, OpenAI, Anthropic, Groq, Mistral, Azure OpenAI, and many more OpenAI-compatible endpoints.
+
+## Usage
+
+```text
+docker model gateway
+```
+
+## Options
+
+| Option | Description |
+|---|---|
+| `-c, --config string` | Path to the YAML configuration file |
+| `--host string` | Host address to bind to (default "0.0.0.0") |
+| `-p, --port uint16` | Port to listen on (default 4000) |
+| `-v, --verbose` | Enable verbose (debug) logging |

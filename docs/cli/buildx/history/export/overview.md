@@ -1,0 +1,19 @@
+# docker buildx history export
+
+Export build records into Docker Desktop bundle.
+
+## Usage
+
+```text
+docker buildx history export [OPTIONS] [REF...]
+```
+
+## Options
+
+| Option | Description |
+|---|---|
+| `--all` | Export all build records for the builder |
+| `--builder string` | Override the configured builder instance |
+| `-D, --debug` | Enable debug logging |
+| `--finalize` | Ensure build records are finalized before exporting |
+| `-o, --output string` | Output file path |
