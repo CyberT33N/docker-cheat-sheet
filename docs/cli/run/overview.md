@@ -82,3 +82,11 @@ docker run -d --name test -it ubuntu
 # on alpine use sh cause bash does not exist
 docker run -d --name test -it ubuntu bash -c "your command here"
 ```
+
+## Smoke-test an image entrypoint
+
+```bash
+docker run --rm <REGION>-docker.pkg.dev/<PROJECT_ID>/<REPOSITORY_NAME>/<IMAGE_NAME>:<COMMIT_SHA> --version
+```
+
+Architectural explanation: running the image with its diagnostic argument (`--version`) proves the packaged entrypoint before any delivery — the container starts, prints and exits. `--rm` removes the container and its anonymous volumes at exit, so the proof leaves no residue. The diagnostic surface of a workload must stay free of external dependencies (no credentials, no network) so the smoke test proves the artifact itself.

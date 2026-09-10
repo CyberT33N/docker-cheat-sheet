@@ -1,5 +1,4 @@
 # docker build — TOC
 
-- [Overview](./overview.md) — description, usage and documented notes
-- [Flags](./flags.md) — complete option reference
+- [Overview](./overview.md) — description, usage and options
 - [Examples](./examples/) — verified examples (planned)

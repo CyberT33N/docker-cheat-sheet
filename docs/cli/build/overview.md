@@ -2,58 +2,26 @@
 
 Build an image from a Dockerfile.
 
-The docker build command builds Docker images from a Dockerfile and a "context".
-
-- [Docker documentation: docker build](https://docs.docker.com/engine/reference/commandline/build/)
-
-> `docker build` is an alias of `docker buildx build` (BuildKit). The complete option reference is documented in [Flags](./flags.md).
-
 ## Usage
 
 ```text
-docker buildx build [OPTIONS] PATH | URL | -
+docker build [OPTIONS] PATH
 ```
 
-## Aliases
+## Options
 
-- `docker build`
-- `docker builder build`
-- `docker image build`
-- `docker buildx b`
+| Option | Description |
+|---|---|
+| `--build-arg stringArray` | Set build-time variables (for example the parameterized controller argument of a governed Dockerfile) |
+| `--platform string` | Set the target platform (for example `linux/amd64`) |
+| `-t, --tag stringArray` | Name and optionally a tag in the `name:tag` format |
 
-## Documented notes
+## Documented examples
+
+Parameterized governed build onto a digest-pinned minimal runtime:
 
 ```bash
-# . <-- means catch docker file from the current directory
-docker build .
+docker build --build-arg CONTROLLER=<CONTROLLER_NAME> --platform linux/amd64 -t <REGION>-docker.pkg.dev/<PROJECT_ID>/<REPOSITORY_NAME>/<IMAGE_NAME>:<COMMIT_SHA> .
 ```
 
-### tag
-
-- [An introduction to Docker tags](https://www.freecodecamp.org/news/an-introduction-to-docker-tags-9b5395636c2a/)
-- Docker tags convey useful information about a specific image version/variant
-- name:tag
-- -t or --tag
-
-```bash
-# . <-- means catch docker file from the current directory
-docker build . -t namehere
-
-# If you later want to push to remote repo you may use
-docker build . -t usernameORDomain/imagename
-```
-
-### file
-
-- Tells where the Dockerfile is located. For default it chooses the current path.
-- -f or --file
-
-```bash
-docker build -f location here
-```
-
-## Build from specific Dockerfile
-
-```bash
-sudo docker build - < Dockerfile.test -t yourTagNameHere
-```
+Architectural explanation: the governed build form packages a locally built, toolchain-pinned binary onto a digest-pinned minimal non-root runtime through a parameterized Dockerfile (`ARG CONTROLLER`); the build context is the repository root, so the binary path in the context is build output, never source. The proof pair of the build is the entrypoint smoke test (`docker run --rm <ref> --version`, see [run](../run/overview.md)) before any delivery and the registry-side digest read-back after the push (see [push](../push/overview.md)) — the local build is proven only when the pushed digest equals the registry read-back.
